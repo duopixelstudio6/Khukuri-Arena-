@@ -1,0 +1,8 @@
+{
+  "name": "Khukuri Arena",
+  "description": "Official website for Khukuri Arena – Free Fire tournament app for Android players in Nepal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
