@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Khukuri Arena | Enter the Arena</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -28,16 +30,27 @@ a{
     color:inherit;
 }
 
-/* NAVBAR */
+button,
+input{
+    font:inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
 nav{
     position:sticky;
     top:0;
     z-index:1000;
     width:100%;
     padding:16px 7%;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     background:rgba(7,7,7,.94);
     border-bottom:1px solid #222;
     backdrop-filter:blur(10px);
@@ -64,17 +77,28 @@ nav{
     color:#ff3131;
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
+
 .hero{
     min-height:90vh;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     text-align:center;
     padding:80px 20px;
-    position:relative;
+
     background:
-        radial-gradient(circle at center,#351010 0%,#110707 35%,#070707 70%);
+        radial-gradient(
+            circle at center,
+            #351010 0%,
+            #110707 35%,
+            #070707 70%
+        );
 }
 
 .hero-content{
@@ -83,17 +107,23 @@ nav{
 
 .badge{
     display:inline-block;
+
     padding:8px 15px;
+
     border:1px solid #ff3131;
     border-radius:30px;
+
     color:#ff5555;
+
     font-size:13px;
+
     margin-bottom:25px;
 }
 
 .hero h1{
     font-size:clamp(50px,10vw,110px);
     line-height:.9;
+
     font-weight:1000;
     letter-spacing:-5px;
 }
@@ -104,25 +134,38 @@ nav{
 
 .hero p{
     max-width:600px;
+
     margin:25px auto;
+
     color:#aaa;
+
     font-size:17px;
     line-height:1.6;
 }
 
 .buttons{
     display:flex;
+
     justify-content:center;
+
     gap:15px;
+
     flex-wrap:wrap;
+
     margin-top:30px;
 }
 
 .btn{
     padding:15px 27px;
+
     border-radius:8px;
+
     font-weight:bold;
+
     border:1px solid #333;
+
+    cursor:pointer;
+
     transition:.2s;
 }
 
@@ -132,74 +175,112 @@ nav{
 
 .btn-primary{
     background:#ff3131;
+
     color:#fff;
+
     border-color:#ff3131;
-    box-shadow:0 10px 30px rgba(255,49,49,.25);
+
+    box-shadow:
+        0 10px 30px rgba(255,49,49,.25);
 }
 
 .btn-secondary{
     background:#111;
 }
 
-/* SECTION */
+
+/* =========================
+   SECTIONS
+========================= */
+
 section{
     padding:90px 7%;
 }
 
 .section-title{
     text-align:center;
+
     margin-bottom:45px;
 }
 
 .section-title small{
     color:#ff3131;
+
     font-weight:bold;
+
     letter-spacing:2px;
 }
 
 .section-title h2{
     font-size:42px;
+
     margin-top:10px;
 }
 
-/* TOURNAMENTS */
+
+/* =========================
+   TOURNAMENTS
+========================= */
+
 .tournament-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(240px,1fr));
+
     gap:20px;
 }
 
 .tournament-card{
-    background:linear-gradient(145deg,#151515,#0d0d0d);
+    background:
+        linear-gradient(
+            145deg,
+            #151515,
+            #0d0d0d
+        );
+
     border:1px solid #292929;
+
     border-radius:15px;
+
     padding:25px;
+
     transition:.25s;
 }
 
 .tournament-card:hover{
     transform:translateY(-5px);
+
     border-color:#ff3131;
 }
 
 .tournament-status{
     display:inline-block;
+
     font-size:11px;
+
     padding:6px 10px;
+
     border-radius:20px;
+
     background:#281010;
+
     color:#ff5555;
+
     margin-bottom:18px;
 }
 
 .tournament-card h3{
     font-size:22px;
+
     margin-bottom:12px;
 }
 
 .tournament-info{
     color:#999;
+
     line-height:1.8;
+
     font-size:14px;
 }
 
@@ -207,60 +288,92 @@ section{
     color:#fff;
 }
 
-/* SCREENSHOTS */
+
+/* =========================
+   SCREENSHOTS
+========================= */
+
 .screenshot-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(210px,1fr));
+
     gap:20px;
 }
 
 .screenshot-card{
     background:#101010;
+
     border:1px solid #252525;
+
     border-radius:15px;
+
     overflow:hidden;
 }
 
 .screenshot-card img{
     width:100%;
+
     display:block;
+
     aspect-ratio:9/16;
+
     object-fit:cover;
+
     background:#181818;
 }
 
 .screenshot-placeholder{
     aspect-ratio:9/16;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     text-align:center;
+
     color:#777;
+
     padding:25px;
 }
 
-/* FEATURES */
+
+/* =========================
+   FEATURES
+========================= */
+
 .feature-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
     gap:20px;
 }
 
 .feature{
     background:#111;
+
     border:1px solid #262626;
+
     padding:28px;
+
     border-radius:15px;
+
     transition:.25s;
 }
 
 .feature:hover{
     border-color:#ff3131;
+
     transform:translateY(-5px);
 }
 
 .feature-icon{
     font-size:30px;
+
     margin-bottom:18px;
 }
 
@@ -270,121 +383,244 @@ section{
 
 .feature p{
     color:#999;
+
     line-height:1.6;
+
     font-size:14px;
 }
 
-/* STEPS */
+
+/* =========================
+   STEPS
+========================= */
+
 .steps{
     max-width:900px;
+
     margin:auto;
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap:20px;
 }
 
 .step{
     text-align:center;
+
     padding:30px 15px;
 }
 
 .step-number{
     width:50px;
     height:50px;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     margin:0 auto 18px;
+
     border-radius:50%;
+
     background:#ff3131;
+
     font-weight:bold;
 }
 
-/* DOWNLOAD */
+
+/* =========================
+   DOWNLOAD
+========================= */
+
 .download{
     text-align:center;
-    background:linear-gradient(135deg,#180707,#090909);
+
+    background:
+        linear-gradient(
+            135deg,
+            #180707,
+            #090909
+        );
+
     border-top:1px solid #222;
     border-bottom:1px solid #222;
 }
 
 .download h2{
     font-size:45px;
+
     margin-bottom:15px;
 }
 
 .download p{
     color:#999;
+
     margin-bottom:30px;
 }
 
-/* SOCIAL */
+
+/* =========================
+   SOCIALS
+========================= */
+
 .social-grid{
     display:flex;
+
     justify-content:center;
+
     gap:15px;
+
     flex-wrap:wrap;
 }
 
 .social{
     min-width:170px;
+
     padding:17px 22px;
+
     border:1px solid #292929;
+
     background:#111;
+
     border-radius:10px;
+
     text-align:center;
+
     transition:.2s;
 }
 
 .social:hover{
     border-color:#ff3131;
+
     transform:translateY(-3px);
 }
 
 .social strong{
     display:block;
+
     margin-bottom:5px;
 }
 
 .social span{
     color:#888;
+
     font-size:13px;
 }
 
-/* ADMIN */
-.admin-section{
-    background:#050505;
-    border-top:1px solid #181818;
+
+/* =========================
+   ADMIN MODAL
+========================= */
+
+.admin-overlay{
+    position:fixed;
+
+    inset:0;
+
+    z-index:5000;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:20px;
+
+    background:
+        rgba(0,0,0,.88);
+
+    backdrop-filter:blur(10px);
+}
+
+.admin-overlay.show{
+    display:flex;
 }
 
 .admin-box{
-    max-width:650px;
-    margin:auto;
-    background:#101010;
-    border:1px solid #292929;
-    border-radius:15px;
-    padding:30px;
+    width:100%;
+
+    max-width:520px;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    background:#111;
+
+    border:1px solid #333;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    box-shadow:
+        0 20px 80px rgba(0,0,0,.7);
 }
 
-.admin-box h3{
-    margin-bottom:10px;
+.admin-header{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
 }
 
-.admin-box p{
-    color:#888;
+.admin-header h2{
+    color:#fff;
+}
+
+.close-btn{
+    width:38px;
+    height:38px;
+
+    border-radius:50%;
+
+    border:1px solid #333;
+
+    background:#181818;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:20px;
+}
+
+.close-btn:hover{
+    border-color:#ff3131;
+}
+
+.admin-message{
+    color:#999;
+
     line-height:1.6;
+
     font-size:14px;
+
     margin-bottom:20px;
 }
 
 .admin-input{
     width:100%;
+
     padding:14px;
+
     background:#080808;
+
     border:1px solid #333;
+
     border-radius:8px;
+
     color:#fff;
+
     outline:none;
+
     margin-bottom:12px;
 }
 
@@ -392,30 +628,45 @@ section{
     border-color:#ff3131;
 }
 
-.admin-panel{
-    display:none;
-    margin-top:25px;
-    padding-top:25px;
-    border-top:1px solid #292929;
+.admin-status{
+    min-height:20px;
+
+    margin:12px 0;
+
+    color:#ff5555;
+
+    font-size:14px;
 }
 
-.admin-panel.show{
+.admin-tools{
+    display:none;
+}
+
+.admin-tools.show{
     display:block;
 }
 
 .upload-label{
     display:block;
-    padding:16px;
+
+    padding:18px;
+
     border:1px dashed #555;
+
     border-radius:10px;
+
     text-align:center;
+
     color:#aaa;
+
     cursor:pointer;
+
     margin-bottom:15px;
 }
 
 .upload-label:hover{
     border-color:#ff3131;
+
     color:#fff;
 }
 
@@ -423,35 +674,113 @@ section{
     display:none;
 }
 
-.admin-preview{
+.admin-list{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-    gap:10px;
+
+    gap:12px;
+
     margin-top:20px;
 }
 
-.admin-preview img{
-    width:100%;
-    aspect-ratio:9/16;
-    object-fit:cover;
-    border-radius:8px;
-    border:1px solid #333;
+.admin-item{
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:#080808;
+
+    border:1px solid #292929;
+
+    padding:10px;
+
+    border-radius:10px;
 }
 
-/* FOOTER */
+.admin-item img{
+    width:60px;
+    height:75px;
+
+    object-fit:cover;
+
+    border-radius:6px;
+}
+
+.admin-item-info{
+    flex:1;
+
+    overflow:hidden;
+}
+
+.admin-item-info div{
+    color:#aaa;
+
+    font-size:12px;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+}
+
+.delete-btn{
+    padding:9px 12px;
+
+    border:1px solid #552020;
+
+    background:#210b0b;
+
+    color:#ff5555;
+
+    border-radius:7px;
+
+    cursor:pointer;
+}
+
+.delete-btn:hover{
+    background:#3a1010;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
 footer{
-    padding:35px 7%;
+    padding:40px 7%;
+
     text-align:center;
+
     color:#666;
+
     font-size:13px;
+
     border-top:1px solid #181818;
 }
 
 footer strong{
     color:#aaa;
+
+    cursor:pointer;
+
+    user-select:none;
 }
 
-/* MOBILE */
+.footer-secret{
+    margin-top:8px;
+
+    font-size:10px;
+
+    color:#333;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
 @media(max-width:700px){
 
     nav{
@@ -460,6 +789,7 @@ footer strong{
 
     .nav-links{
         gap:12px;
+
         font-size:12px;
     }
 
@@ -486,31 +816,60 @@ footer strong{
     .download h2{
         font-size:34px;
     }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav>
-    <div class="logo">⚔️ KHUKURI <span>ARENA</span></div>
+
+    <div class="logo">
+        ⚔️ KHUKURI <span>ARENA</span>
+    </div>
 
     <div class="nav-links">
-        <a href="#tournaments">Tournaments</a>
-        <a href="#screenshots">App</a>
-        <a href="#features">Features</a>
-        <a href="#contact">Contact</a>
+
+        <a href="#tournaments">
+            Tournaments
+        </a>
+
+        <a href="#screenshots">
+            App
+        </a>
+
+        <a href="#features">
+            Features
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
     </div>
+
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
+
 <header class="hero">
 
     <div class="hero-content">
 
-        <div class="badge">⚔️ OFFICIAL KHUKURI ARENA</div>
+        <div class="badge">
+            ⚔️ OFFICIAL KHUKURI ARENA
+        </div>
 
         <h1>
             ENTER<br>
@@ -518,20 +877,25 @@ footer strong{
         </h1>
 
         <p>
-            Compete. Play. Win. Experience Khukuri Arena —
+            Compete. Play. Win.
+            Experience Khukuri Arena —
             your gaming tournament platform built for players.
         </p>
 
         <div class="buttons">
 
-            <a class="btn btn-primary"
-               href="Khukuri-Arena.apk"
-               download>
+            <a
+                class="btn btn-primary"
+                href="Khukuri-Arena.apk"
+                download
+            >
                 📲 DOWNLOAD APK
             </a>
 
-            <a class="btn btn-secondary"
-               href="#features">
+            <a
+                class="btn btn-secondary"
+                href="#features"
+            >
                 EXPLORE FEATURES
             </a>
 
@@ -542,85 +906,153 @@ footer strong{
 </header>
 
 
-<!-- TOURNAMENT HIGHLIGHTS -->
+<!-- =========================
+     TOURNAMENTS
+========================= -->
+
 <section id="tournaments">
 
     <div class="section-title">
-        <small>🔥 COMPETE</small>
-        <h2>Featured Tournaments</h2>
+
+        <small>
+            🔥 COMPETE
+        </small>
+
+        <h2>
+            Featured Tournaments
+        </h2>
+
     </div>
+
 
     <div class="tournament-grid">
 
+
         <div class="tournament-card">
-            <div class="tournament-status">COMING SOON</div>
-            <h3>Khukuri Battle</h3>
+
+            <div class="tournament-status">
+                COMING SOON
+            </div>
+
+            <h3>
+                Khukuri Battle
+            </h3>
 
             <div class="tournament-info">
-                Prize Pool: <strong>Coming Soon</strong><br>
-                Entry Fee: <strong>Coming Soon</strong><br>
-                Date: <strong>Coming Soon</strong>
+
+                Prize Pool:
+                <strong>Coming Soon</strong>
+                <br>
+
+                Entry Fee:
+                <strong>Coming Soon</strong>
+                <br>
+
+                Date:
+                <strong>Coming Soon</strong>
+
             </div>
+
         </div>
 
 
         <div class="tournament-card">
-            <div class="tournament-status">COMING SOON</div>
-            <h3>Arena Clash</h3>
+
+            <div class="tournament-status">
+                COMING SOON
+            </div>
+
+            <h3>
+                Arena Clash
+            </h3>
 
             <div class="tournament-info">
-                Prize Pool: <strong>Coming Soon</strong><br>
-                Entry Fee: <strong>Coming Soon</strong><br>
-                Date: <strong>Coming Soon</strong>
+
+                Prize Pool:
+                <strong>Coming Soon</strong>
+                <br>
+
+                Entry Fee:
+                <strong>Coming Soon</strong>
+                <br>
+
+                Date:
+                <strong>Coming Soon</strong>
+
             </div>
+
         </div>
 
 
         <div class="tournament-card">
-            <div class="tournament-status">COMING SOON</div>
-            <h3>Victory Cup</h3>
+
+            <div class="tournament-status">
+                COMING SOON
+            </div>
+
+            <h3>
+                Victory Cup
+            </h3>
 
             <div class="tournament-info">
-                Prize Pool: <strong>Coming Soon</strong><br>
-                Entry Fee: <strong>Coming Soon</strong><br>
-                Date: <strong>Coming Soon</strong>
+
+                Prize Pool:
+                <strong>Coming Soon</strong>
+                <br>
+
+                Entry Fee:
+                <strong>Coming Soon</strong>
+                <br>
+
+                Date:
+                <strong>Coming Soon</strong>
+
             </div>
+
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- APP SCREENSHOTS -->
+<!-- =========================
+     SCREENSHOTS
+========================= -->
+
 <section id="screenshots">
 
     <div class="section-title">
-        <small>📱 APP PREVIEW</small>
-        <h2>Inside Khukuri Arena</h2>
+
+        <small>
+            📱 APP PREVIEW
+        </small>
+
+        <h2>
+            Inside Khukuri Arena
+        </h2>
+
     </div>
 
-    <div class="screenshot-grid" id="publicScreenshots">
+
+    <div
+        class="screenshot-grid"
+        id="publicScreenshots"
+    >
 
         <div class="screenshot-card">
-            <div class="screenshot-placeholder">
-                📱<br><br>
-                App screenshot will appear here.
-            </div>
-        </div>
 
-        <div class="screenshot-card">
             <div class="screenshot-placeholder">
-                🏆<br><br>
-                Tournament screenshot will appear here.
-            </div>
-        </div>
 
-        <div class="screenshot-card">
-            <div class="screenshot-placeholder">
-                💰<br><br>
-                Wallet screenshot will appear here.
+                📱
+                <br><br>
+
+                App screenshots
+                will appear here.
+
             </div>
+
         </div>
 
     </div>
@@ -628,211 +1060,471 @@ footer strong{
 </section>
 
 
-<!-- FEATURES -->
+<!-- =========================
+     FEATURES
+========================= -->
+
 <section id="features">
 
     <div class="section-title">
-        <small>⚡ BUILT FOR PLAYERS</small>
-        <h2>Everything You Need</h2>
+
+        <small>
+            ⚡ BUILT FOR PLAYERS
+        </small>
+
+        <h2>
+            Everything You Need
+        </h2>
+
     </div>
+
 
     <div class="feature-grid">
 
-        <div class="feature">
-            <div class="feature-icon">🏆</div>
-            <h3>Tournaments</h3>
-            <p>
-                Join competitive tournaments and take on other players.
-            </p>
-        </div>
 
         <div class="feature">
-            <div class="feature-icon">⚡</div>
-            <h3>Fast Experience</h3>
+
+            <div class="feature-icon">
+                🏆
+            </div>
+
+            <h3>
+                Tournaments
+            </h3>
+
             <p>
-                Designed for a simple and fast tournament experience.
+                Join competitive tournaments
+                and take on other players.
             </p>
+
         </div>
 
-        <div class="feature">
-            <div class="feature-icon">👤</div>
-            <h3>Your Profile</h3>
-            <p>
-                Manage your player profile and tournament activity.
-            </p>
-        </div>
 
         <div class="feature">
-            <div class="feature-icon">💰</div>
-            <h3>Wallet</h3>
+
+            <div class="feature-icon">
+                ⚡
+            </div>
+
+            <h3>
+                Fast Experience
+            </h3>
+
             <p>
-                Keep track of your tournament wallet and activity.
+                Designed for a simple and fast
+                tournament experience.
             </p>
+
         </div>
 
-        <div class="feature">
-            <div class="feature-icon">📊</div>
-            <h3>Match Activity</h3>
-            <p>
-                Keep your tournament activity organized in one place.
-            </p>
-        </div>
 
         <div class="feature">
-            <div class="feature-icon">🎮</div>
-            <h3>Made for Players</h3>
+
+            <div class="feature-icon">
+                👤
+            </div>
+
+            <h3>
+                Your Profile
+            </h3>
+
             <p>
-                A gaming platform designed around competitive players.
+                Manage your player profile
+                and tournament activity.
             </p>
+
         </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                💰
+            </div>
+
+            <h3>
+                Wallet
+            </h3>
+
+            <p>
+                Keep track of your tournament
+                wallet and activity.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                📊
+            </div>
+
+            <h3>
+                Match Activity
+            </h3>
+
+            <p>
+                Keep your tournament activity
+                organized in one place.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🎮
+            </div>
+
+            <h3>
+                Made for Players
+            </h3>
+
+            <p>
+                A gaming platform designed
+                around competitive players.
+            </p>
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- HOW IT WORKS -->
+<!-- =========================
+     HOW IT WORKS
+========================= -->
+
 <section>
 
     <div class="section-title">
-        <small>🚀 GET STARTED</small>
-        <h2>Start in Three Steps</h2>
+
+        <small>
+            🚀 GET STARTED
+        </small>
+
+        <h2>
+            Start in Three Steps
+        </h2>
+
     </div>
+
 
     <div class="steps">
 
-        <div class="step">
-            <div class="step-number">1</div>
-            <h3>Download</h3>
-            <p>Download the official Khukuri Arena APK.</p>
-        </div>
 
         <div class="step">
-            <div class="step-number">2</div>
-            <h3>Open the App</h3>
-            <p>Install and open Khukuri Arena on your Android device.</p>
+
+            <div class="step-number">
+                1
+            </div>
+
+            <h3>
+                Download
+            </h3>
+
+            <p>
+                Download the official
+                Khukuri Arena APK.
+            </p>
+
         </div>
 
+
         <div class="step">
-            <div class="step-number">3</div>
-            <h3>Enter the Arena</h3>
-            <p>Create your profile and start exploring tournaments.</p>
+
+            <div class="step-number">
+                2
+            </div>
+
+            <h3>
+                Open the App
+            </h3>
+
+            <p>
+                Install and open
+                Khukuri Arena.
+            </p>
+
         </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                3
+            </div>
+
+            <h3>
+                Enter the Arena
+            </h3>
+
+            <p>
+                Create your profile
+                and explore tournaments.
+            </p>
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- DOWNLOAD -->
+<!-- =========================
+     DOWNLOAD
+========================= -->
+
 <section class="download">
 
-    <h2>READY TO ENTER?</h2>
+    <h2>
+        READY TO ENTER?
+    </h2>
 
     <p>
-        Download Khukuri Arena and step into the arena.
+        Download Khukuri Arena
+        and step into the arena.
     </p>
 
-    <a class="btn btn-primary"
-       href="Khukuri-Arena.apk"
-       download>
+    <a
+        class="btn btn-primary"
+        href="Khukuri-Arena.apk"
+        download
+    >
         ⚔️ DOWNLOAD KHUKURI ARENA
     </a>
 
 </section>
 
 
-<!-- SOCIAL + CONTACT -->
+<!-- =========================
+     CONTACT / SOCIAL
+========================= -->
+
 <section id="contact">
 
     <div class="section-title">
-        <small>🌐 CONNECT</small>
-        <h2>Follow & Contact</h2>
+
+        <small>
+            🌐 CONNECT
+        </small>
+
+        <h2>
+            Follow & Contact
+        </h2>
+
     </div>
+
 
     <div class="social-grid">
 
-        <!-- Replace # with your real Facebook page URL -->
-        <a class="social"
-           href="#"
-           onclick="alert('Facebook page coming soon!'); return false;">
-            <strong>📘 Facebook</strong>
-            <span>Coming soon</span>
+
+        <a
+            class="social"
+            href="#"
+            onclick="
+                alert('Facebook page coming soon!');
+                return false;
+            "
+        >
+
+            <strong>
+                📘 Facebook
+            </strong>
+
+            <span>
+                Coming soon
+            </span>
+
         </a>
 
 
-        <!-- Replace # with your real TikTok URL -->
-        <a class="social"
-           href="#"
-           onclick="alert('TikTok page coming soon!'); return false;">
-            <strong>🎵 TikTok</strong>
-            <span>Coming soon</span>
+        <a
+            class="social"
+            href="#"
+            onclick="
+                alert('TikTok page coming soon!');
+                return false;
+            "
+        >
+
+            <strong>
+                🎵 TikTok
+            </strong>
+
+            <span>
+                Coming soon
+            </span>
+
         </a>
 
 
-        <a class="social"
-           href="tel:+9779846711977">
-            <strong>📞 Contact / Support</strong>
-            <span>9846711977</span>
+        <a
+            class="social"
+            href="tel:+9779846711977"
+        >
+
+            <strong>
+                📞 Contact / Support
+            </strong>
+
+            <span>
+                9846711977
+            </span>
+
         </a>
+
 
     </div>
 
 </section>
 
 
-<!-- ADMIN SCREENSHOT MANAGER -->
-<section class="admin-section">
+<!-- =========================
+     ADMIN MODAL
+========================= -->
 
-    <div class="section-title">
-
-        <small>🔐 PRIVATE AREA</small>
-
-        <h2>Screenshot Manager</h2>
-
-    </div>
-
+<div
+    id="adminOverlay"
+    class="admin-overlay"
+>
 
     <div class="admin-box">
 
-        <h3>Admin Access</h3>
 
-        <p>
-            This area is for the Khukuri Arena administrator.
-            Enter the admin password to access screenshot tools.
-        </p>
+        <div class="admin-header">
+
+            <h2>
+                ⚔️ Admin
+            </h2>
+
+            <button
+                class="close-btn"
+                onclick="closeAdmin()"
+            >
+                ×
+            </button>
+
+        </div>
 
 
-        <input
-            type="password"
-            id="adminPassword"
-            class="admin-input"
-            placeholder="Enter admin password"
+        <!-- SETUP -->
+
+        <div id="setupArea">
+
+            <p class="admin-message">
+
+                This is the first-time administrator setup.
+
+                Create your private master password.
+
+                You will use it every time you open
+                the admin panel.
+
+            </p>
+
+
+            <input
+                id="setupKey"
+                class="admin-input"
+                type="password"
+                placeholder="One-time setup key"
+            >
+
+
+            <input
+                id="newPassword"
+                class="admin-input"
+                type="password"
+                placeholder="Create master password"
+            >
+
+
+            <input
+                id="confirmPassword"
+                class="admin-input"
+                type="password"
+                placeholder="Confirm master password"
+            >
+
+
+            <button
+                class="btn btn-primary"
+                onclick="createMasterPassword()"
+            >
+                🔐 CREATE MASTER PASSWORD
+            </button>
+
+        </div>
+
+
+        <!-- LOGIN -->
+
+        <div id="loginArea">
+
+            <p class="admin-message">
+
+                Enter your master password
+                to manage Khukuri Arena screenshots.
+
+            </p>
+
+
+            <input
+                id="loginPassword"
+                class="admin-input"
+                type="password"
+                placeholder="Master password"
+            >
+
+
+            <button
+                class="btn btn-primary"
+                onclick="adminLogin()"
+            >
+                🔐 LOGIN
+            </button>
+
+        </div>
+
+
+        <div
+            id="adminStatus"
+            class="admin-status"
+        ></div>
+
+
+        <!-- TOOLS -->
+
+        <div
+            id="adminTools"
+            class="admin-tools"
         >
 
+            <p class="admin-message">
 
-        <button
-            class="btn btn-primary"
-            onclick="unlockAdmin()">
-            🔐 UNLOCK
-        </button>
+                Upload screenshots here.
+                Once uploaded, they are stored online
+                and will remain on the public website
+                until you delete them.
 
-
-        <div id="adminPanel" class="admin-panel">
-
-            <h3>📸 Add App Screenshots</h3>
-
-            <p>
-                Select screenshots from your device.
-                They will appear in the preview below.
             </p>
 
 
             <label
+                class="upload-label"
                 for="imageInput"
-                class="upload-label">
+            >
 
-                ➕ SELECT SCREENSHOTS
+                📸
+                <br><br>
+
+                TAP TO SELECT SCREENSHOTS
 
             </label>
 
@@ -840,124 +1532,929 @@ footer strong{
             <input
                 id="imageInput"
                 type="file"
-                accept="image/*"
+                accept="image/jpeg,image/png,image/webp"
                 multiple
-                onchange="previewImages(event)"
             >
 
 
             <div
-                id="adminPreview"
-                class="admin-preview">
-            </div>
+                id="adminList"
+                class="admin-list"
+            ></div>
+
+
+            <button
+                class="btn btn-secondary"
+                style="margin-top:20px;width:100%;"
+                onclick="logoutAdmin()"
+            >
+                LOG OUT
+            </button>
 
         </div>
 
+
     </div>
 
-</section>
+</div>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
     <p>
-        <strong>⚔️ KHUKURI ARENA</strong>
+
+        <strong
+            id="secretLogo"
+        >
+            ⚔️ KHUKURI ARENA
+        </strong>
+
     </p>
 
     <p style="margin-top:8px;">
-        © 2026 Khukuri Arena. All rights reserved.
+
+        © 2026 Khukuri Arena.
+        All rights reserved.
+
     </p>
+
+    <div class="footer-secret">
+        Tap the logo 5 times for administrator access.
+    </div>
 
 </footer>
 
 
 <script>
 
-/*
-====================================================
-BASIC ADMIN SCREENSHOT MANAGER
-====================================================
+/* =====================================================
+   IMPORTANT
+   =====================================================
 
-IMPORTANT:
-This is only a FRONT-END lock.
+   AFTER CREATING YOUR CLOUDFLARE WORKER:
 
-Anyone who knows how to inspect website code can
-discover the password.
+   Replace this URL with your Worker URL.
 
-For REAL private administration, use a backend.
-====================================================
-*/
+   Example:
 
+   https://khukuri-arena-admin.yourname.workers.dev
+===================================================== */
 
-/*
-CHANGE THIS PASSWORD.
-
-Example:
-const ADMIN_PASSWORD = "your-new-password";
-*/
-
-const ADMIN_PASSWORD = "KHUKURI2026";
+const API_URL =
+    "PASTE-YOUR-CLOUDFLARE-WORKER-URL-HERE";
 
 
-function unlockAdmin(){
+/* =====================================================
+   ADMIN STATE
+===================================================== */
 
-    const entered =
-        document.getElementById("adminPassword").value;
+let adminPassword = "";
 
-    if(entered === ADMIN_PASSWORD){
+let tapCount = 0;
+
+let tapTimer = null;
+
+
+/* =====================================================
+   FIVE TAP SECRET ADMIN OPEN
+===================================================== */
+
+document
+    .getElementById("secretLogo")
+    .addEventListener("click", function(){
+
+        tapCount++;
+
+        clearTimeout(tapTimer);
+
+        tapTimer = setTimeout(function(){
+
+            tapCount = 0;
+
+        }, 1200);
+
+
+        if(tapCount >= 5){
+
+            tapCount = 0;
+
+            openAdmin();
+
+        }
+
+    });
+
+
+/* =====================================================
+   OPEN ADMIN
+===================================================== */
+
+async function openAdmin(){
+
+    document
+        .getElementById("adminOverlay")
+        .classList
+        .add("show");
+
+
+    document
+        .getElementById("adminStatus")
+        .textContent = "";
+
+
+    try{
+
+        const response =
+            await fetch(API_URL + "/api/status");
+
+
+        const data =
+            await response.json();
+
+
+        if(data.configured){
+
+            document
+                .getElementById("setupArea")
+                .style.display = "none";
+
+            document
+                .getElementById("loginArea")
+                .style.display = "block";
+
+        }else{
+
+            document
+                .getElementById("setupArea")
+                .style.display = "block";
+
+            document
+                .getElementById("loginArea")
+                .style.display = "none";
+
+        }
+
+    }catch(error){
+
+        setStatus(
+            "Cannot connect to admin server. Check your Worker URL.",
+            true
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   CLOSE ADMIN
+===================================================== */
+
+function closeAdmin(){
+
+    document
+        .getElementById("adminOverlay")
+        .classList
+        .remove("show");
+
+}
+
+
+/* =====================================================
+   STATUS MESSAGE
+===================================================== */
+
+function setStatus(message,error=false){
+
+    const element =
+        document.getElementById("adminStatus");
+
+    element.textContent = message;
+
+    element.style.color =
+        error ? "#ff5555" : "#69ff8c";
+
+}
+
+
+/* =====================================================
+   CREATE MASTER PASSWORD
+===================================================== */
+
+async function createMasterPassword(){
+
+    const setupKey =
+        document
+        .getElementById("setupKey")
+        .value
+        .trim();
+
+
+    const password =
+        document
+        .getElementById("newPassword")
+        .value;
+
+
+    const confirm =
+        document
+        .getElementById("confirmPassword")
+        .value;
+
+
+    if(!setupKey){
+
+        setStatus(
+            "Enter the one-time setup key.",
+            true
+        );
+
+        return;
+
+    }
+
+
+    if(password.length < 8){
+
+        setStatus(
+            "Password must be at least 8 characters.",
+            true
+        );
+
+        return;
+
+    }
+
+
+    if(password !== confirm){
+
+        setStatus(
+            "Passwords do not match.",
+            true
+        );
+
+        return;
+
+    }
+
+
+    setStatus("Creating master password...");
+
+
+    try{
+
+        const response =
+            await fetch(
+                API_URL + "/api/setup",
+                {
+                    method:"POST",
+
+                    headers:{
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body:JSON.stringify({
+                        setupKey,
+                        password
+                    })
+                }
+            );
+
+
+        const data =
+            await response.json();
+
+
+        if(!response.ok){
+
+            setStatus(
+                data.error || "Setup failed.",
+                true
+            );
+
+            return;
+
+        }
+
+
+        setStatus(
+            "Master password created successfully."
+        );
+
+
+        setTimeout(function(){
+
+            document
+                .getElementById("setupArea")
+                .style.display = "none";
+
+            document
+                .getElementById("loginArea")
+                .style.display = "block";
+
+            document
+                .getElementById("setupKey")
+                .value = "";
+
+            document
+                .getElementById("newPassword")
+                .value = "";
+
+            document
+                .getElementById("confirmPassword")
+                .value = "";
+
+        },800);
+
+
+    }catch(error){
+
+        setStatus(
+            "Could not connect to server.",
+            true
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   LOGIN
+===================================================== */
+
+async function adminLogin(){
+
+    const password =
+        document
+        .getElementById("loginPassword")
+        .value;
+
+
+    if(!password){
+
+        setStatus(
+            "Enter your master password.",
+            true
+        );
+
+        return;
+
+    }
+
+
+    setStatus("Checking password...");
+
+
+    try{
+
+        const response =
+            await fetch(
+                API_URL + "/api/login",
+                {
+                    method:"POST",
+
+                    headers:{
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body:JSON.stringify({
+                        password
+                    })
+                }
+            );
+
+
+        const data =
+            await response.json();
+
+
+        if(!response.ok){
+
+            setStatus(
+                data.error || "Wrong password.",
+                true
+            );
+
+            return;
+
+        }
+
+
+        adminPassword = password;
+
 
         document
-            .getElementById("adminPanel")
+            .getElementById("loginArea")
+            .style.display = "none";
+
+
+        document
+            .getElementById("adminTools")
             .classList
             .add("show");
 
-        alert("Admin access granted ⚔️");
 
-    }else{
+        setStatus(
+            "Admin access granted ⚔️"
+        );
 
-        alert("Wrong password.");
+
+        loadScreenshots();
+
+
+    }catch(error){
+
+        setStatus(
+            "Could not connect to server.",
+            true
+        );
 
     }
 
 }
 
 
-function previewImages(event){
+/* =====================================================
+   LOGOUT
+===================================================== */
 
-    const files = event.target.files;
+function logoutAdmin(){
 
-    const preview =
-        document.getElementById("adminPreview");
+    adminPassword = "";
 
-    preview.innerHTML = "";
 
-    for(let i = 0; i < files.length; i++){
+    document
+        .getElementById("adminTools")
+        .classList
+        .remove("show");
 
-        const file = files[i];
 
-        if(!file.type.startsWith("image/")){
+    document
+        .getElementById("loginArea")
+        .style.display = "block";
+
+
+    document
+        .getElementById("loginPassword")
+        .value = "";
+
+
+    setStatus("");
+
+}
+
+
+/* =====================================================
+   UPLOAD
+===================================================== */
+
+document
+    .getElementById("imageInput")
+    .addEventListener(
+        "change",
+        uploadScreenshots
+    );
+
+
+async function uploadScreenshots(event){
+
+    const files =
+        Array.from(event.target.files);
+
+
+    if(!files.length){
+
+        return;
+
+    }
+
+
+    for(const file of files){
+
+        if(file.size > 10 * 1024 * 1024){
+
+            setStatus(
+                file.name +
+                " is larger than 10 MB.",
+                true
+            );
+
             continue;
+
         }
 
-        const reader = new FileReader();
 
-        reader.onload = function(e){
+        setStatus(
+            "Uploading " + file.name + "..."
+        );
 
-            const img =
-                document.createElement("img");
 
-            img.src = e.target.result;
+        const formData =
+            new FormData();
 
-            preview.appendChild(img);
 
-        };
+        formData.append(
+            "file",
+            file
+        );
 
-        reader.readAsDataURL(file);
+
+        try{
+
+            const response =
+                await fetch(
+                    API_URL + "/api/upload",
+                    {
+                        method:"POST",
+
+                        headers:{
+                            "X-Admin-Password":
+                                adminPassword
+                        },
+
+                        body:formData
+                    }
+                );
+
+
+            const data =
+                await response.json();
+
+
+            if(!response.ok){
+
+                setStatus(
+                    data.error ||
+                    "Upload failed.",
+                    true
+                );
+
+                continue;
+
+            }
+
+
+            setStatus(
+                "Uploaded " +
+                file.name +
+                " successfully."
+            );
+
+        }catch(error){
+
+            setStatus(
+                "Upload failed.",
+                true
+            );
+
+        }
+
+    }
+
+
+    event.target.value = "";
+
+    await loadScreenshots();
+
+}
+
+
+/* =====================================================
+   LOAD PUBLIC SCREENSHOTS
+===================================================== */
+
+async function loadScreenshots(){
+
+    try{
+
+        const response =
+            await fetch(
+                API_URL +
+                "/api/screenshots"
+            );
+
+
+        const data =
+            await response.json();
+
+
+        if(!response.ok){
+
+            return;
+
+        }
+
+
+        renderPublicScreenshots(
+            data.screenshots || []
+        );
+
+
+        renderAdminList(
+            data.screenshots || []
+        );
+
+
+    }catch(error){
+
+        console.log(
+            "Screenshot loading error:",
+            error
+        );
 
     }
 
 }
+
+
+/* =====================================================
+   PUBLIC SCREENSHOT DISPLAY
+===================================================== */
+
+function renderPublicScreenshots(
+    screenshots
+){
+
+    const container =
+        document.getElementById(
+            "publicScreenshots"
+        );
+
+
+    if(!screenshots.length){
+
+        container.innerHTML = `
+
+            <div class="screenshot-card">
+
+                <div class="screenshot-placeholder">
+
+                    📱
+                    <br><br>
+
+                    App screenshots
+                    will appear here.
+
+                </div>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    container.innerHTML = "";
+
+
+    screenshots.forEach(function(item){
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "screenshot-card";
+
+
+        const image =
+            document.createElement("img");
+
+        image.src =
+            item.url;
+
+        image.alt =
+            "Khukuri Arena App Screenshot";
+
+        image.loading =
+            "lazy";
+
+
+        card.appendChild(image);
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+/* =====================================================
+   ADMIN SCREENSHOT LIST
+===================================================== */
+
+function renderAdminList(
+    screenshots
+){
+
+    const container =
+        document.getElementById(
+            "adminList"
+        );
+
+
+    if(!screenshots.length){
+
+        container.innerHTML = `
+
+            <div
+                style="
+                color:#666;
+                text-align:center;
+                padding:20px;
+                "
+            >
+                No screenshots uploaded yet.
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    container.innerHTML = "";
+
+
+    screenshots.forEach(function(item){
+
+        const row =
+            document.createElement("div");
+
+        row.className =
+            "admin-item";
+
+
+        row.innerHTML = `
+
+            <img
+                src="${item.url}"
+                alt=""
+            >
+
+            <div class="admin-item-info">
+
+                <strong>
+                    Screenshot
+                </strong>
+
+                <div>
+                    ${escapeHtml(item.key)}
+                </div>
+
+            </div>
+
+            <button
+                class="delete-btn"
+                onclick="deleteScreenshot('${encodeURIComponent(item.key)}')"
+            >
+                DELETE
+            </button>
+
+        `;
+
+
+        container.appendChild(row);
+
+    });
+
+}
+
+
+/* =====================================================
+   DELETE
+===================================================== */
+
+async function deleteScreenshot(
+    encodedKey
+){
+
+    const key =
+        decodeURIComponent(
+            encodedKey
+        );
+
+
+    if(!confirm(
+        "Delete this screenshot permanently?"
+    )){
+
+        return;
+
+    }
+
+
+    setStatus(
+        "Deleting screenshot..."
+    );
+
+
+    try{
+
+        const response =
+            await fetch(
+                API_URL + "/api/delete",
+                {
+                    method:"POST",
+
+                    headers:{
+                        "Content-Type":
+                            "application/json",
+
+                        "X-Admin-Password":
+                            adminPassword
+                    },
+
+                    body:JSON.stringify({
+                        key
+                    })
+                }
+            );
+
+
+        const data =
+            await response.json();
+
+
+        if(!response.ok){
+
+            setStatus(
+                data.error ||
+                "Delete failed.",
+                true
+            );
+
+            return;
+
+        }
+
+
+        setStatus(
+            "Screenshot deleted."
+        );
+
+
+        await loadScreenshots();
+
+
+    }catch(error){
+
+        setStatus(
+            "Delete failed.",
+            true
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   HTML ESCAPE
+===================================================== */
+
+function escapeHtml(text){
+
+    return String(text)
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#039;");
+
+}
+
+
+/* =====================================================
+   INITIAL LOAD
+===================================================== */
+
+window.addEventListener(
+    "load",
+    function(){
+
+        if(
+            API_URL &&
+            !API_URL.includes(
+                "PASTE-YOUR"
+            )
+        ){
+
+            loadScreenshots();
+
+        }
+
+    }
+);
 
 </script>
 
