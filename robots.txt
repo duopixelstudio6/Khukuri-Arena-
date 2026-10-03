@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://duopixelstudio6.github.io/Khukuri-Arena-/sitemap.xml
